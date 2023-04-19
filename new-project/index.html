@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Time $top</title>
+  <link rel="stylesheet" href="./main.scss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/60e19c4821.js" crossorigin="anonymous"></script>
+
+
+
+
+</head>
+
+<body>
+  <header>
+    <i class="fa-solid fa-wallet">Wallet</i>
+    <h2>Twój osobisty menadżer finanfsów.</h2>
+  </header>
+
+
+  <main>
+    <section class="transactions">
+      <h2 class="title">Lista transakcji</h2>
+
+      <div class="transactions-list">
+        <div class="income-area">
+          <h3>Przychód:</h3>
+          <!-- <div class="transaction" id="0">
+            <p class="transaction-name"><i class="fas fa-money-bill-wave"></i>Wypłata</p>
+            <p class="transaction-amount">2000zł</p>
+            <button class="delete"><i class="fas fa-times"></i></button>
+          </div> -->
+         
+        </div>
+
+        <div class="expenses-area">
+          <h3>Wydatki:</h3>
+
+          <!-- <div class="transaction" id="1">
+            <p class="transaction-name"><i class="fas fa-cart-arrow-down"></i> Zakupy</p>
+            <p class="transaction-amount">200zł</p>
+            <button class="delete"><i class="fas fa-times"></i></button>
+          </div>
+
+          <div class="transaction" id="2">
+            <p class="transaction-name"><i class="fas fa-hamburger"></i> Jedzenie</p>
+            <p class="transaction-amount">100zł</p>
+            <button class="delete"><i class="fas fa-times"></i></button>
+          </div>
+
+          <div class="transaction" id="3">
+            <p class="transaction-name"><i class="fas fa-film"></i> Kino</p>
+            <p class="transaction-amount">50zł</p>
+            <button class="delete"><i class="fas fa-times"></i></button>
+          </div>
+        </div> -->
+
+      </div>
+
+    </section>
+
+
+    <section class="options">
+      <div>
+        <h2 class="title">Dostępne środki:</h2>
+        <div class="available-money">0zł</div>
+      </div>
+
+      <div class="controls">
+        <button class="add-transaction"><i class="fas fa-plus"> Dodaj Transkacje</i></button>
+        <button class="delete-all"><i class="far fa-trash-alt">  Usun wszystko</i></button>
+      </div>
+
+      <div class="style-selection">
+        <h2 class="title">Wybierz styl:</h2>
+        <div class="color-buttons">
+          <button class="light"></button>
+          <button class="dark"></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="add-transaction-panel">
+    <h2 class="title">Dodaj nową transakcję</h2>
+
+    <label for="name">Nazwa:</label>
+    <small>(podaj nazwę transkacji)</small>
+    <input type="text" id="name">
+
+
+    <label for="amount">Kwota:</label>
+    <small>(podaj kwotę transakcji, jeśli dodajesz wydatek, postaw znak minusa na poczatku kwoty)</small>
+    <input id="amount" type="number">
+
+    <label for="category">Wybierz Kategorię:</label>
+    <p>( [ + ] oznacza przychód, [ - ] oznacza wydatek)</p>
+    <select id="category">
+      <option value="none" selected disabled></option>
+      <option value="income">[+] Wypłata</option>
+      <option value="shopping">[-] Zakupy</option>
+      <option value="food">[-] Jedzenie</option>
+      <option value="cinema">[-] Kino</option>
+
+    </select>
+
+    <div class="panel-buttons">
+      <button class="save"><i class="fas fa-save"></i> Zapisz</button>
+      <button class="cancel"><i class="fas fa-window-close"></i>  Anuluj</button>
+    </div>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
